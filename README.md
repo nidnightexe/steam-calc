@@ -11,11 +11,11 @@
   <tr>
     <td width="50%" align="center">
       <b>Tampilan Desktop</b><br><br>
-      <img src="./assets/dashboard-desktop.png" alt="Desktop View" width="100%">
+      <img src="./public/dashboard-desktop.png" alt="Desktop View" width="100%">
     </td>
     <td width="50%" align="center">
       <b>Tampilan Mobile</b><br><br>
-      <img src="./assets/dashboard-mobile.png" alt="Mobile View" width="100%">
+      <img src="./public/dashboard-mobile.png" alt="Mobile View" width="100%">
     </td>
   </tr>
 </table>
