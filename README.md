@@ -31,10 +31,24 @@
 
 This project is built using the following technologies:
 
-* **Backend:** Laravel 12 (PHP)
-* **Frontend:** React.js
-* **UI Components:** Shadcn UI / Tailwind CSS
-* **API:** Steam Web API
+* **Backend:**
+  <br>
+  ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+  ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+
+* **Frontend:**
+  <br>
+  ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+  ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+
+* **UI Components:**
+  <br>
+  ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+  ![Shadcn UI](https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcnui&logoColor=white)
+
+* **API:**
+  <br>
+  ![Steam API](https://img.shields.io/badge/Steam_API-1b2838?style=for-the-badge&logo=steam&logoColor=white)
 
 ## 🚀 Getting Started
 
