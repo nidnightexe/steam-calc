@@ -10,12 +10,12 @@
 <table border="0">
   <tr>
     <td width="50%" align="center">
-      <b>Tampilan Desktop</b><br><br>
-      <img src="./public/dashboard-desktop.png" alt="Desktop View" width="100%">
+      <b>Login</b><br><br>
+      <img src="./public/login.png" alt="Login" width="100%">
     </td>
     <td width="50%" align="center">
-      <b>Tampilan Mobile</b><br><br>
-      <img src="./public/dashboard-mobile.png" alt="Mobile View" width="100%">
+      <b>Dashboard</b><br><br>
+      <img src="./public/dashboard.png" alt="Dashboard" width="100%">
     </td>
   </tr>
 </table>
