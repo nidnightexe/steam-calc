@@ -7,7 +7,18 @@
 
 ## 📸 Screenshots
 
-![Dashboard Screenshot](https://via.placeholder.com/800x400?text=Dashboard+Preview)
+<table border="0">
+  <tr>
+    <td width="50%" align="center">
+      <b>Tampilan Desktop</b><br><br>
+      <img src="./assets/dashboard-desktop.png" alt="Desktop View" width="100%">
+    </td>
+    <td width="50%" align="center">
+      <b>Tampilan Mobile</b><br><br>
+      <img src="./assets/dashboard-mobile.png" alt="Mobile View" width="100%">
+    </td>
+  </tr>
+</table>
 
 ## ✨ Features
 
