@@ -1,128 +1,124 @@
-# Steam Calc 🎮
+<div align="center">
+  <a href="https://github.com/nidnightexe/steam-calc">
+    <img src="./public/favicon.svg" alt="Logo" width="80" height="80">
+  </a>
 
-**Steam Calc** is a web application designed to calculate and visualize Steam profile statistics. It provides insights into account value, playtime data, and game library details using the Steam Web API.
+  <h1 align="center">Steam Calc</h1>
 
-![Project Status](https://img.shields.io/badge/status-active-success.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+  <p align="center">
+    <strong>Analisis Statistik & Valuasi Akun Steam</strong>
+    <br />
+    Aplikasi web modern untuk menghitung dan memvisualisasikan statistik profil Steam menggunakan Laravel dan React.
+    <br />
+    <br />
+    <a href="#-fitur">Fitur</a> ·
+    <a href="#-teknologi">Teknologi</a> ·
+    <a href="#-instalasi">Instalasi</a> ·
+    <a href="https://github.com/nidnightexe/steam-calc/issues">Lapor Bug</a>
+  </p>
 
-## 📸 Screenshots
+  <p align="center">
+    <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel" />
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+    <img src="https://img.shields.io/badge/Pest-PHP-purple?style=for-the-badge&logo=php&logoColor=white" alt="Pest" />
+  </p>
+</div>
 
-<table border="0">
-  <tr>
-    <td width="50%" align="center">
-      <b>Login</b><br><br>
-      <img src="./public/login.png" alt="Login" width="100%">
-    </td>
-    <td width="50%" align="center">
-      <b>Dashboard</b><br><br>
-      <img src="./public/dashboard.png" alt="Dashboard" width="100%">
-    </td>
-  </tr>
-</table>
+---
 
-## ✨ Features
+## 📸 Tampilan Aplikasi
 
-* **Account Valuation:** Calculate the total value of a Steam library (lowest prices vs. current prices).
-* **Playtime Analytics:** View total hours played and average playtime per game.
-* **Profile Insights:** Display user avatar, bans status, and creation date.
-* **Responsive Design:** Optimized for both desktop and mobile usage.
+Berikut adalah antarmuka dari **Steam Calc** yang dirancang dengan fokus pada pengalaman pengguna (UX) yang bersih.
 
-## 🛠️ Tech Stack
+| Halaman Login | Dashboard Utama |
+|:---:|:---:|
+| <img src="./public/login.png" alt="Halaman Login" width="100%"> | <img src="./public/dashboard.png" alt="Dashboard" width="100%"> |
+| *Autentikasi Aman* | *Statistik Real-time* |
 
-This project is built using the following technologies:
+---
 
-* **Backend:**
-  <br>
-  ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
-  ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+## 📖 Tentang Proyek
 
-* **Frontend:**
-  <br>
-  ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-  ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+**Steam Calc** adalah alat yang memungkinkan pengguna untuk melihat statistik mendalam mengenai akun Steam mereka. Proyek ini dibangun untuk mendemonstrasikan integrasi yang mulus antara backend PHP yang kuat dan frontend reaktif.
 
-* **UI Components:**
-  <br>
-  ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-  ![Shadcn UI](https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcnui&logoColor=white)
+Fitur utama meliputi:
+* 🔐 **Autentikasi Aman:** Menggunakan sistem autentikasi bawaan Laravel.
+* 📊 **Kalkulasi Aset:** Menghitung estimasi nilai akun berdasarkan game yang dimiliki.
+* ⚡ **Performa Tinggi:** Dibangun di atas arsitektur modern Laravel + React.
 
-* **API:**
-  <br>
-  ![Steam API](https://img.shields.io/badge/Steam_API-1b2838?style=for-the-badge&logo=steam&logoColor=white)
+---
 
-## 🚀 Getting Started
+## 🛠 Teknologi
 
-Follow these steps to set up the project locally on your machine.
+Proyek ini dibangun menggunakan stack modern (TALL/VILT stack variant):
 
-### Prerequisites
+| Komponen | Teknologi | Keterangan |
+| :--- | :--- | :--- |
+| **Framework** | [Laravel](https://laravel.com) | Backend PHP yang ekspresif dan elegan. |
+| **Frontend** | [React](https://reactjs.org) | Library JavaScript untuk membangun antarmuka pengguna. |
+| **Starter Kit** | Laravel Starter | Setup modern dengan integrasi React. |
+| **Testing** | [Pest](https://pestphp.com) | Framework testing PHP yang elegan. |
 
-Ensure you have the following installed:
+---
+
+## 🚀 Instalasi
+
+Ikuti langkah-langkah berikut untuk menjalankan proyek ini di mesin lokal kamu (Localhost).
+
+### Prasyarat
+Pastikan kamu telah menginstal:
 * PHP >= 8.2
 * Composer
 * Node.js & NPM
-* Git
 
-### Installation
+### Langkah-langkah
 
-1.  **Clone the repository**
+1.  **Clone Repositori**
     ```bash
     git clone [https://github.com/nidnightexe/steam-calc.git](https://github.com/nidnightexe/steam-calc.git)
     cd steam-calc
     ```
 
-2.  **Install Backend Dependencies**
+2.  **Install Dependencies**
+    Install paket backend dan frontend:
     ```bash
     composer install
-    ```
-
-3.  **Install Frontend Dependencies**
-    ```bash
     npm install
     ```
 
-4.  **Environment Setup**
-    Copy the example environment file and generate the application key:
+3.  **Setup Environment**
+    Salin file `.env.example` menjadi `.env` dan konfigurasi database kamu:
     ```bash
     cp .env.example .env
     php artisan key:generate
     ```
 
-5.  **Steam API Configuration**
-    Open the `.env` file and add your Steam API Key. You can get one [here](https://steamcommunity.com/dev/apikey).
-    ```env
-    STEAM_API_KEY=your_steam_api_key_here
-    ```
-
-6.  **Run Migrations (Optional/If needed)**
+4.  **Setup Database**
+    Jalankan migrasi untuk membuat tabel database:
     ```bash
     php artisan migrate
     ```
 
-7.  **Run the Application**
-    You need to run both the backend server and the frontend bundler (Vite):
+5.  **Jalankan Aplikasi**
+    Kamu perlu menjalankan dua terminal terpisah:
 
-    *Terminal 1:*
+    *Terminal 1 (Laravel Server):*
     ```bash
     php artisan serve
     ```
 
-    *Terminal 2:*
+    *Terminal 2 (Vite Development):*
     ```bash
     npm run dev
     ```
 
-    Access the app at `http://localhost:8000`.
+Buka browser dan akses `http://localhost:8000`.
 
-## 🤝 Contributing
+---
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+## 🧪 Pengujian (Testing)
 
-1.  Fork the project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
+Proyek ini menggunakan **Pest** sebagai framework pengujian. Untuk menjalankan test suite:
 
-## 📝 License
-
-This project is licensed under the [MIT License](LICENSE).
+```bash
+php artisan test
