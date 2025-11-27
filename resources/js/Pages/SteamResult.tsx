@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link, router } from '@inertiajs/react';
-import { ResultData } from '@/wayfinder/SteamTypes';
+import { ResultData } from '@/Types/SteamTypes';
 import ProfileSidebar from '@/Components/Steam/ProfileSidebar';
 import StatsContent from '@/Components/Steam/StatsContent';
 import { Button } from "@/Components/ui/button";
@@ -15,14 +14,14 @@ interface Props {
 export default function SteamResult({ result }: Props) {
     if (!result) return null;
 
-    const bgImage = result.profile.hero_image 
-        ? `url('${result.profile.hero_image}')` 
+    const bgImage = result.profile.hero_image
+        ? `url('${result.profile.hero_image}')`
         : `url('https://community.cloudflare.steamstatic.com/public/shared/images/join_bg.jpg')`;
 
     const handleCurrencyChange = (value: string) => {
         router.get(
-            `/profile/${result.ids.id64}`, 
-            { currency: value }, 
+            `/profile/${result.ids.id64}`,
+            { currency: value },
             { preserveScroll: true, preserveState: true }
         );
     };
@@ -32,7 +31,7 @@ export default function SteamResult({ result }: Props) {
 
             {/* Dynamic Background */}
             <div className="fixed inset-0 w-full h-full -z-50">
-                <div 
+                <div
                     className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out scale-105 blur-sm opacity-40"
                     style={{ backgroundImage: bgImage }}
                 />
@@ -41,15 +40,15 @@ export default function SteamResult({ result }: Props) {
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10 pb-0">
-                
+
                 {/* HEADER NAVIGATION */}
                 <header className="flex flex-col sm:flex-row justify-between items-center mb-10 gap-4 top-4 z-50">
-                    
+
                     <div className="flex items-center gap-3 w-full sm:w-auto">
                         {/* Back Button */}
-                        <Button 
-                            variant="ghost" 
-                            className="group bg-black/40 hover:bg-black/60 text-gray-300 hover:text-white border border-white/10 backdrop-blur-md rounded-full px-5 h-12 transition-all hover:w-auto" 
+                        <Button
+                            variant="ghost"
+                            className="group bg-black/40 hover:bg-black/60 text-gray-300 hover:text-white border border-white/10 backdrop-blur-md rounded-full px-5 h-12 transition-all hover:w-auto"
                             asChild
                         >
                             <Link href="/" className="flex items-center gap-2">
@@ -93,9 +92,9 @@ export default function SteamResult({ result }: Props) {
             </div>
 
             {/* Global Toaster styling */}
-            <Toaster 
-                position="top-center" 
-                theme="dark" 
+            <Toaster
+                position="top-center"
+                theme="dark"
                 toastOptions={{
                     style: {
                         background: '#18181b',

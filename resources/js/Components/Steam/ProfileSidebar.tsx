@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ResultData } from '@/wayfinder/SteamTypes';
+import { ResultData } from '@/Types/SteamTypes';
 import { Card, CardContent, CardHeader } from "@/Components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/Components/ui/avatar";
 import { Badge } from "@/Components/ui/badge";
@@ -30,7 +30,7 @@ export default function ProfileSidebar({ result }: Props) {
     const isInGame = result.profile.status_label === 'In-Game';
     const hasFrame = result.profile.frame_url !== null;
 
-    const [copiedLabel, setCopiedLabel] = useState<string | null>(null);
+    const [copiedLabel, setCopiedLabel] = useState < string | null > (null);
 
     let statusColor = "text-gray-400";
     let statusBg = "bg-gray-500";
@@ -65,11 +65,10 @@ export default function ProfileSidebar({ result }: Props) {
 
             {/* PROFILE CARD */}
             <Card className="bg-[#171a21]/80 border-white/10 backdrop-blur-xl shadow-2xl overflow-hidden group p-0">
-                <div className={`h-24 w-full bg-gradient-to-b ${
-                    isInGame ? 'from-green-900/40 to-[#171a21]/0' :
-                    isOnline ? 'from-blue-900/40 to-[#171a21]/0' :
-                    'from-gray-800/40 to-[#171a21]/0'
-                }`} />
+                <div className={`h-24 w-full bg-gradient-to-b ${isInGame ? 'from-green-900/40 to-[#171a21]/0' :
+                        isOnline ? 'from-blue-900/40 to-[#171a21]/0' :
+                            'from-gray-800/40 to-[#171a21]/0'
+                    }`} />
 
                 <div className="px-6 pb-6 -mt-12 flex flex-col items-center relative z-10">
 
@@ -133,11 +132,10 @@ export default function ProfileSidebar({ result }: Props) {
                     {/* REPUTATION STATUS */}
                     <HoverCard>
                         <HoverCardTrigger asChild>
-                            <div className={`w-full flex items-center justify-between p-3 rounded-xl border mb-6 transition-all cursor-pointer hover:bg-opacity-20 ${
-                                isFullyClean
+                            <div className={`w-full flex items-center justify-between p-3 rounded-xl border mb-6 transition-all cursor-pointer hover:bg-opacity-20 ${isFullyClean
                                     ? 'bg-emerald-500/5 border-emerald-500/20 text-emerald-400 hover:bg-emerald-500/10'
                                     : 'bg-red-500/5 border-red-500/20 text-red-400 hover:bg-red-500/10'
-                            }`}>
+                                }`}>
                                 <div className="flex items-center gap-3">
                                     <div className={`p-2 rounded-lg ${isFullyClean ? 'bg-emerald-500/10' : 'bg-red-500/10'}`}>
                                         {isFullyClean ? <ShieldCheck className="w-5 h-5" /> : <ShieldAlert className="w-5 h-5" />}
@@ -258,16 +256,14 @@ export default function ProfileSidebar({ result }: Props) {
                         >
                             <span className="text-[10px] font-bold text-gray-500 uppercase">{id.label}</span>
                             <div className="flex items-center gap-2">
-                                <span className={`text-xs font-mono transition-all duration-300 ${
-                                    copiedLabel === id.label
+                                <span className={`text-xs font-mono transition-all duration-300 ${copiedLabel === id.label
                                         ? 'text-green-400 font-bold'
                                         : 'text-gray-300 group-hover:text-white'
-                                }`}>
+                                    }`}>
                                     {copiedLabel === id.label ? 'Copied!' : id.val}
                                 </span>
-                                <Copy className={`w-3 h-3 transition-opacity ${
-                                    copiedLabel === id.label ? 'opacity-0' : 'opacity-0 group-hover:opacity-50 text-gray-400'
-                                }`} />
+                                <Copy className={`w-3 h-3 transition-opacity ${copiedLabel === id.label ? 'opacity-0' : 'opacity-0 group-hover:opacity-50 text-gray-400'
+                                    }`} />
                             </div>
                         </div>
                     ))}

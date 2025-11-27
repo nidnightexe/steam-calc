@@ -30,9 +30,9 @@
 
 Berikut adalah antarmuka dari **Steam Calc** yang dirancang dengan fokus pada pengalaman pengguna (UX) yang bersih.
 
-| Halaman Login | Dashboard Utama |
+| Halaman Pencarian | Dashboard Utama |
 |:---:|:---:|
-| <img src="./public/login.png" alt="Halaman Login" width="100%"> | <img src="./public/dashboard.png" alt="Dashboard" width="100%"> |
+| <img src="./public/login.png" alt="Halaman Pencarian" width="100%"> | <img src="./public/dashboard.png" alt="Dashboard" width="100%"> |
 | *Autentikasi Aman* | *Statistik Real-time* |
 
 ---

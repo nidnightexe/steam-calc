@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from '@inertiajs/react';
-import { ResultData } from '@/wayfinder/SteamTypes';
+import { ResultData } from '@/Types/SteamTypes';
 import { Card, CardContent, CardHeader, CardTitle } from "@/Components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/Components/ui/avatar";
 import { Progress } from "@/Components/ui/progress";
 import { Badge } from "@/Components/ui/badge";
 import { Button } from "@/Components/ui/button";
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
 } from "@/Components/ui/tooltip";
-import { 
+import {
     Gamepad2, Clock, Coins, Users, Trophy, History, Library, Ghost, PlayCircle, Wallet, ExternalLink, ChevronLeft, ChevronRight, ArrowRight, Award, Medal, Info, Crown, Zap, Wifi, Moon
 } from "lucide-react";
 import {
-  Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
+    Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
 } from "@/Components/ui/select"
 import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
+    HoverCard,
+    HoverCardContent,
+    HoverCardTrigger,
 } from "@/Components/ui/hover-card"
 interface Props {
     result: ResultData;
@@ -30,7 +30,7 @@ interface Props {
 
 export default function StatsContent({ result, onCurrencyChange }: Props) {
     const playedPercent = result.stats.played_percentage;
-    
+
     // Pagination State untuk Friends
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -55,11 +55,11 @@ export default function StatsContent({ result, onCurrencyChange }: Props) {
     const totalFriends = result.friends_list ? result.friends_list.length : 0;
     const totalPages = Math.ceil(totalFriends / itemsPerPage);
 
-    const currentFriends = result.friends_list 
+    const currentFriends = result.friends_list
         ? result.friends_list.slice(
             (currentPage - 1) * itemsPerPage,
             currentPage * itemsPerPage
-          )
+        )
         : [];
 
     const goToPrevPage = () => {
@@ -72,7 +72,7 @@ export default function StatsContent({ result, onCurrencyChange }: Props) {
 
     return (
         <div className="space-y-6 animate-fade-in-up">
-            
+
             {/* SECTION 1: MAIN STATS */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                 <StatCardPremium title="Total Game" value={result.stats.total_games} subtext="Titles in Library" icon={Gamepad2} colorClass="text-blue-400" bgClass="bg-blue-500/10 hover:bg-blue-500/20 border-blue-500/20" glowClass="from-blue-500/20" />
@@ -230,9 +230,9 @@ export default function StatsContent({ result, onCurrencyChange }: Props) {
                                             {game.achievement ? (
                                                 <div className="flex items-center gap-3">
                                                     <div className="h-1.5 flex-1 bg-black/40 rounded-full overflow-hidden">
-                                                        <div 
-                                                            className={`h-full rounded-full ${isTop ? 'bg-yellow-500' : 'bg-blue-500/70'}`} 
-                                                            style={{ width: `${game.achievement.percentage}%` }} 
+                                                        <div
+                                                            className={`h-full rounded-full ${isTop ? 'bg-yellow-500' : 'bg-blue-500/70'}`}
+                                                            style={{ width: `${game.achievement.percentage}%` }}
                                                         />
                                                     </div>
                                                     <Tooltip delayDuration={0}>
@@ -300,7 +300,7 @@ export default function StatsContent({ result, onCurrencyChange }: Props) {
                                 <Users className="w-4 h-4 text-pink-400" />
                                 Friend ({result.friends_count})
                             </CardTitle>
-                            
+
                             {totalPages > 1 && (
                                 <div className="flex items-center gap-2 bg-black/20 px-2 py-1 rounded-lg border border-white/5">
                                     <Button variant="ghost" size="icon" className="h-7 w-7 bg-white/5 border-white/10 hover:bg-white/10 disabled:opacity-30 text-gray-400 hover:text-white" onClick={goToPrevPage} disabled={currentPage === 1}>
@@ -316,36 +316,36 @@ export default function StatsContent({ result, onCurrencyChange }: Props) {
                             )}
                         </div>
                     </CardHeader>
-                    
+
                     <CardContent className="p-6">
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
                             {currentFriends.map((friend) => {
-                                const ringColor = friend.status_label === 'In-Game' ? 'border-green-500 shadow-[0_0_10px_rgba(34,197,94,0.2)]' : 
-                                                  friend.status_label === 'Online' ? 'border-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.2)]' : 
-                                                  'border-gray-700/50';
-                                
+                                const ringColor = friend.status_label === 'In-Game' ? 'border-green-500 shadow-[0_0_10px_rgba(34,197,94,0.2)]' :
+                                    friend.status_label === 'Online' ? 'border-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.2)]' :
+                                        'border-gray-700/50';
+
                                 const statusTextClass = friend.status_label === 'In-Game' ? 'text-green-400' :
-                                                        friend.status_label === 'Online' ? 'text-blue-400' :
-                                                        'text-gray-500';
-                                
+                                    friend.status_label === 'Online' ? 'text-blue-400' :
+                                        'text-gray-500';
+
                                 const statusIcon = friend.status_label === 'In-Game' ? <Gamepad2 className="w-3 h-3" /> :
-                                                   friend.status_label === 'Online' ? <Wifi className="w-3 h-3" /> :
-                                                   <Moon className="w-3 h-3" />;
+                                    friend.status_label === 'Online' ? <Wifi className="w-3 h-3" /> :
+                                        <Moon className="w-3 h-3" />;
 
                                 return (
                                     <HoverCard key={friend.steamid} openDelay={150} closeDelay={0}>
                                         <HoverCardTrigger asChild>
-                                            <Link 
+                                            <Link
                                                 href={`/profile/${friend.steamid}?currency=${result.stats.currency_code}`}
                                                 className="group relative flex flex-col items-center p-4 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-white/10 transition-all cursor-pointer hover:-translate-y-1 hover:shadow-lg"
                                             >
                                                 <div className={`relative mb-3 rounded-full p-0.5 border-2 ${ringColor} transition-colors bg-[#09090b]`}>
                                                     <Avatar className="h-14 w-14 rounded-full">
                                                         <AvatarImage src={friend.avatar} />
-                                                        <AvatarFallback>{friend.personaname.substring(0,1)}</AvatarFallback>
+                                                        <AvatarFallback>{friend.personaname.substring(0, 1)}</AvatarFallback>
                                                     </Avatar>
                                                 </div>
-                                                
+
                                                 <div className="w-full text-center space-y-0.5">
                                                     <p className="text-xs font-bold text-gray-300 truncate w-full group-hover:text-white transition-colors">
                                                         {friend.personaname}
@@ -356,9 +356,9 @@ export default function StatsContent({ result, onCurrencyChange }: Props) {
                                                 </div>
                                             </Link>
                                         </HoverCardTrigger>
-                                        
+
                                         {/* [UPDATE] HoverCard Content - Menambahkan sideOffset={10} dan collisionPadding={16} */}
-                                        <HoverCardContent 
+                                        <HoverCardContent
                                             className="w-72 bg-[#1a1d24]/95 backdrop-blur-xl border-white/10 p-0 shadow-2xl rounded-xl z-[100] overflow-hidden"
                                             sideOffset={10}
                                             collisionPadding={16}
@@ -367,7 +367,7 @@ export default function StatsContent({ result, onCurrencyChange }: Props) {
                                                 <div className="flex items-center gap-3">
                                                     <Avatar className={`h-14 w-14 rounded-full border-2 ${ringColor.split(' ')[0]} shadow-lg`}>
                                                         <AvatarImage src={friend.avatar} />
-                                                        <AvatarFallback>{friend.personaname.substring(0,2)}</AvatarFallback>
+                                                        <AvatarFallback>{friend.personaname.substring(0, 2)}</AvatarFallback>
                                                     </Avatar>
                                                     <div className="min-w-0 flex-1">
                                                         <h4 className="text-sm font-bold text-white truncate">{friend.personaname}</h4>
