@@ -15,12 +15,14 @@
     <a href="#-teknologi">Teknologi</a> ·
     <a href="#-instalasi">Instalasi</a> ·
     <a href="https://github.com/nidnightexe/steam-calc/issues">Lapor Bug</a>
+    <a href="https://steamcommunity.com/dev/apikey">Steam Api</a>
   </p>
 
   <p align="center">
     <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel" />
     <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
     <img src="https://img.shields.io/badge/Pest-PHP-purple?style=for-the-badge&logo=php&logoColor=white" alt="Pest" />
+    <img src="https://img.shields.io/badge/Steam-1b2838?style=for-the-badge&logo=steam&logoColor=white" alt="Steam API" />
   </p>
 </div>
 
