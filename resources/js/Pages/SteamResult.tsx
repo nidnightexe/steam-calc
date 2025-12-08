@@ -2,6 +2,7 @@ import { Link, router } from '@inertiajs/react';
 import { ResultData } from '@/Types/SteamTypes';
 import ProfileSidebar from '@/Components/Steam/ProfileSidebar';
 import StatsContent from '@/Components/Steam/StatsContent';
+import ShareProfile from '@/Components/Steam/ShareProfile';
 import { Button } from "@/Components/ui/button";
 import { Badge } from "@/Components/ui/badge";
 import { Toaster } from "@/Components/ui/sonner";
@@ -60,8 +61,11 @@ export default function SteamResult({ result }: Props) {
                         </Button>
                     </div>
 
+                    
+
                     {/* Rank Badge */}
                     <div className="flex items-center gap-3">
+                        <ShareProfile result={result} />
                         <Badge variant="outline" className="h-12 px-4 bg-gradient-to-br from-yellow-500/10 to-orange-500/10 border-yellow-500/30 text-yellow-400 rounded-xl backdrop-blur-md shadow-[0_0_15px_rgba(234,179,8,0.1)]">
                             <ShieldCheck className="w-5 h-5 mr-2" />
                             <span className="text-base font-bold tracking-wide">{result.stats.gamer_class}</span>
